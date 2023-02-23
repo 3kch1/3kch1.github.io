@@ -1,0 +1,336 @@
+@charset "utf-8";
+/* CSS Document */
+.screenshot {
+  background-image: url("../images/index/menuframe.png");
+  background-size: 100% 100%;
+  height: auto;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  padding: 50px 60px 30px;
+}
+.screenshot img {
+  height: auto;
+}
+.slider {
+  position: relative;
+  z-index: 1;
+}
+@media(max-width:767px) {
+  .screenshot {
+    display: none;
+  }
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: stretch;
+  gap:30px;
+  padding: 0 20px;
+}
+.story, .discord {
+  width: 50%;
+}
+.box {
+  background-image: url("../images/index/menuframe.png");
+  background-size: 100% 100%;
+  height: auto;
+}
+.box-frame {
+  width: 400px;
+  height: 250px;
+}
+.story-text__title {
+  font-size: 2.0rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.story-text p {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0 auto;
+  line-height: 1.9rem;
+}
+.story-text, .discord-text {
+  padding: 40px 30px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 260px;
+}
+.discord-text__title {
+  font-size: 2.4rem;
+  margin: 20px 0 10px;
+  text-align: center;
+}
+.discord-text p {
+  font-size: 2.0rem;
+  text-align: center;
+}
+.discord-image {
+  width: 85%;
+  justify-content: center;
+  margin: 0 auto;
+}
+.discord2 {
+  display: none;
+}
+.slick-prev, .slick-next {
+  position: absolute;
+  z-index: 3;
+  top: 42%;
+  cursor: pointer;
+  outline: none;
+  border-top: 2px solid #FFF;
+  border-right: 2px solid #FFF;
+  height: 25px;
+  width: 25px;
+}
+.slick-prev {
+  left: 2.5%;
+  transform: rotate(-135deg);
+}
+.slick-next {
+  right: 2.5%;
+  transform: rotate(45deg);
+}
+.slick-dots {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin: 20px 0 0 0 ;
+}
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 50%;
+  background: #FFF;
+}
+.slick-dots .slick-active button {
+  background: #333;
+}
+@media(max-width: 768px) {
+  .screenshot {
+    display: none;
+  }
+  .flex {
+    display: block;
+    padding: 0 20px;
+  }
+  .story {
+    display: none;
+  }
+  .discord {
+    display: none;
+  }
+  .discord2 {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto 30px;
+  }
+}
+@media(max-width: 375px) {
+  .discord-text__title {
+    font-size: 2.2rem;
+  }
+  .discord2 {
+    width: 275px;
+    height: auto;
+  }
+  .discord-text {
+    padding: 30px 20px;
+  }
+}
+.contents-box {
+  background-image: url("../images/index/menuframe.png");
+  background-size: 100% 100%;
+  height: auto;
+  max-width: 900px;
+  max-height: 600px;
+  margin: 30px auto 40px;
+}
+.contents-title {
+  font-size: 3.0rem;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 20px;
+}
+.select-menu > div {
+  background-image: url("../images/index/contentsframe.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  padding: 10px;
+}
+.select-menu {
+  display: grid;
+  grid-template-columns: repeat(5, 150px);
+  grid-template-rows: repeat(2, 150px);
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  padding-bottom: 80px;
+}
+.select-menu img {
+  max-width: 100%;
+  width: 50px;
+  max-height: 100%;
+}
+.select-menu a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.select-menu dt {
+  font-size: 1.6rem;
+  padding-top: 10px;
+  text-align: center;
+}
+.select-menu dd {
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+}
+@media(max-width: 768px) {
+  .contents-box {
+    max-width: 767px;
+    max-height: 5000px;
+    margin: 0 auto ;
+    background: transparent;
+  }
+  .contents-title {
+    padding: 0;
+    color: #FFF;
+  }
+  .select-menu > div {
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+  .select-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 23vw);
+    grid-template-rows: repeat(4, 23vw);
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+  .select-menu img {
+    max-width: 100%;
+    width: 42px;
+    max-height: 100%;
+  }
+  .select-menu a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+  .select-menu dt {
+    font-size: 1.2rem;
+    padding-top: 10px;
+    text-align: center;
+  }
+}
+@media(max-width:400px) {
+  .contents-title {
+    font-size: 2.2rem;
+  }
+  .select-menu dt {
+    font-size: 1.0rem;
+    padding-top: 15px;
+  }
+  .select-menu dd {
+    padding-top: 0;
+    display: flex;
+    height: 100%;
+    width: 80%;
+  }
+}
+.flex2 {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px 30px;
+}
+.store, .movie {
+  background-image: url("../images/index/menuframe.png");
+  background-size: 100% 100%;
+}
+.store-box {
+  padding: 0 30px 40px 30px;
+}
+.store-title {
+  font-size: 3.0rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 40px auto 10px;
+}
+.store-main li {
+  display: flex;
+  justify-content: center;
+}
+.store-sub ul {
+  display: flex;
+  align-items: center;
+}
+.store-main img {
+  max-width: 100%;
+  width: 200px;
+  max-height: 100%;
+  margin: 0 auto 10px;
+  justify-content: center;
+}
+.store-sub img {
+  max-width: 100%;
+  width: 80px;
+  margin: auto 10px;
+  justify-content: center;
+}
+.movie {
+  margin-left: 20px;
+}
+.movie-title {
+  font-size: 3.0rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 40px auto 20px;
+}
+.video {
+  width: 443px;
+  height: 250px;
+  margin: 0 50px 50px;
+}
+@media(max-width:768px){
+  .flex2 {
+    display: none;
+  }
+}
