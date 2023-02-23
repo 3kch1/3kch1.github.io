@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+<title>Dosho</title>
+<meta name="description" content="Doshoは、就職活動に使用するために担当者様、企業様に見せることを目的としたサイトです。">
+<meta name="format-detection" content="telephone=no" />
+<meta property="og:site_name" content="Dosho" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ja-JP" />
+<meta property="og:description" content="Dosho" />
+<meta name="twitter:card" content="summary" />
+<link rel="stylesheet" href="assets/css/destyle.css">
+<link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+<body>
+<header>
+    <h1><a href="./Portfolio_top.html">Dosho</a></h1>
+    <nav>
+        <ul>
+            <li><a href=".templates/Portfolio_top.html">Home</a></li>
+            <li><a href="./Portfolio_work.html">Works</a></li>
+            <li><a href="./Portfolio_about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+<section>
+    <div id="about">
+        <h2>About</h2>
+        <div class="profile-page">
+        <div class="name">
+            <h3>道正　丈作</h3>
+            <div>Dosho Josaku</div>
+        </div>
+        <div class="prof-detail">
+            <h4>使用可能ツール</h4>
+            <dl>
+                <dt>ソフト&#058;</dt>
+                <dd>Illustrator、Photoshop、Adobe XD</dd>
+                <dt>Web&#058;</dt>
+                <dd>HTML、CSS、Javascript</dd>
+            </dl>
+        </div>
+        <div>
+            <p class="birth">1995年&emsp;広島県東広島市生まれ。<span data-birth="1995-01-30"></span>歳。</p>
+            <h4>履歴</h4>
+            <div class="history">
+                <dl>
+                    <dt>2017年3月</dt>
+                    <dd>国立島根大学&emsp;生物資源科学部農林生産学科（他で言う農学部）卒業。</dd>
+                    <dt>2019年8月</dt>
+                    <dd>山本薬品株式会社に営業職として就職。</dd>
+                    <dt>2020年8月</dt>
+                    <dd>山本薬品株式会社を退職。</dd>
+                    <dt>2021年5月</dt>
+                    <dd>HTML/CSSを勉強するためにデジタルハリウッドSTUDIO広島 Webデザイナー専攻に通う。</dd>
+                    <dt>同年10月</dt>
+                    <dd>スクールを卒業し、今に至る。</dd>
+                </dl>
+            </div>
+            <div>
+                <h4>今後の展望</h4>
+                <div class="outlook">
+                経験、知識、技術など全てにおいて乏しいため、全体的なスキルアップを目指したい。<br>
+                コーディングの分野から研鑽を積んでいき、今後はデザインやJavascript等にも力を入れたい。<br>
+                余裕ができてきたら作品を他にも作っていきたい。
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+</main>
+<div id="scroll-top">
+    <a href="#">
+        <div class="arrow"></div>
+    </a>
+</div>
+<footer>
+    <nav>
+        <ul>
+            <li><a href="./Portfolio_top.html">Home</a></li>
+            <li><a href="./Portfolio_work.html">Works</a></li>
+            <li><a href="./Portfolio_about.html">About</a></li>
+        </ul>
+    </nav>
+</footer>
+<script 
+    src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="assets/js/common.js"></script>
+<script>
+    (function () {
+    var today = new Date();
+    document.querySelectorAll('[data-birth]').forEach(function (element) {
+    var birth = element.getAttribute('data-birth');
+    if (birth.match(/^\d{4}(-|\/)\d{2}(-|\/)\d{2}$/)) {
+    var birthDate = new Date(birth);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+    }
+    age = Math.max(age, 0);
+    element.innerHTML = age;
+    }
+    });
+    })();
+</script>
+</body>
+</html>
